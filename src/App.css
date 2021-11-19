@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+.navigate {
+  background-color: aqua
+}
+
+.next:hover {
+  background-color: greenyellow
+}
+
+.previous:hover {
+  background-color: yellow
+}
