@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import FormUserDetails from './FormUserDetails'
 
 export default function UserForm() {
     const initialState = {
@@ -27,6 +28,7 @@ export default function UserForm() {
           return (
               <div>
                 <h1>home page</h1>
+                <FormUserDetails />
                 <button onClick={nextStep} className="navigate next">Next Step</button>
               </div>
               
