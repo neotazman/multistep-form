@@ -13,9 +13,12 @@ export default function UserForm() {
 
     const[state, setState] = useState(initialState)
 
+    const nextStep = () => setState( state.step++ )
+    const previousStep = () => setState( state.step-- )
+
     return (
         <div>
-            
+            the step is {state.step}
         </div>
     )
 }
