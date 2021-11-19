@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import FormUserDetails from './FormUserDetails'
+import FormPersonalDetails from './FormPersonalDetails'
 
 export default function UserForm() {
     const initialState = {
@@ -14,9 +15,13 @@ export default function UserForm() {
 
     const[state, setState] = useState(initialState)
     
+    const handleInputChange = (e) => { //after I make the forms
+        e.preventDefault()
+        setState( { ...state, [e.target.name]: e.target.value } )
+        console.log(state)
+    }
 
     const nextStep = () => {
-        console.log(state)
         setState( { ...state, step: state.step + 1 })
     }
     const previousStep = () => {
@@ -28,7 +33,7 @@ export default function UserForm() {
           return (
               <div>
                 <h1>home page</h1>
-                <FormUserDetails />
+                <FormUserDetails state={state} handleInputChange={handleInputChange} />
                 <button onClick={nextStep} className="navigate next">Next Step</button>
               </div>
               
@@ -37,6 +42,7 @@ export default function UserForm() {
           return (
             <div>
                 <h1>page 2</h1>
+                <FormPersonalDetails state={state} handleInputChange={handleInputChange} />
                 <button onClick={previousStep} className="navigate previous">Previous Step</button>
                 <button onClick={nextStep} className="navigate next">Next Step</button>
             </div>
