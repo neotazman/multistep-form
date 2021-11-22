@@ -43,8 +43,11 @@
 
 #contentView {
   align-items: center;
+  min-width: 30%;
+  max-width: 300px;
   justify-content: space-around;
   background-color: skyblue;
+  padding: 30px;
 }
 
 .navigate {
@@ -64,4 +67,9 @@
   max-width: 40vw;
   background-color: gold;
   font-family: 'Times New Roman', Times, serif;
+}
+
+.delete {
+  color: crimson;
+  background-color: black;
 }
