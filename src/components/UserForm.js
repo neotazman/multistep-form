@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Button from 'react-bootstrap/Button'
 
 import FormUserDetails from './FormUserDetails'
 import FormPersonalDetails from './FormPersonalDetails'
@@ -41,7 +42,7 @@ export default function UserForm() {
               <div id='contentView'>
                 <h1>User Details</h1>
                 <FormUserDetails state={state} handleInputChange={handleInputChange} />
-                <button onClick={nextStep} className="navigate next">Next Step</button>
+                <Button onClick={nextStep} className="navigate next">Next Step</Button>
               </div>
           ) 
         case 2:
@@ -49,8 +50,8 @@ export default function UserForm() {
             <div id='contentView'>
                 <h1>Personal Details</h1>
                 <FormPersonalDetails state={state} handleInputChange={handleInputChange} />
-                <button onClick={previousStep} className="navigate previous">Previous Step</button>
-                <button onClick={nextStep} className="navigate next">Next Step</button>
+                <Button onClick={previousStep} className="navigate previous">Previous Step</Button>
+                <Button onClick={nextStep} className="navigate next">Next Step</Button>
             </div>
           ) 
         case 3:
@@ -58,15 +59,15 @@ export default function UserForm() {
             <div id='contentView'>
                 <h1>Confirmation</h1>
                 <Confirm state={state} deleteButtonFunction={deleteButtonFunction} />
-                <button onClick={previousStep} className="navigate previous">Previous Step</button>
-                <button onClick={nextStep} className="navigate next">Next Step</button>
+                <Button onClick={previousStep} className="navigate previous">Previous Step</Button>
+                <Button onClick={nextStep} className="navigate next">Next Step</Button>
             </div>
           ) 
         case 4:
           return (
             <div id='contentView'>
                 <h1>final page</h1>
-                <button onClick={previousStep} className="navigate previous">Previous Step</button>
+                <Button onClick={previousStep} className="navigate previous">Previous Step</Button>
             </div>
           ) 
       }
@@ -74,8 +75,8 @@ export default function UserForm() {
     // return (
     //     <div>
     //         <h3>the step is {state.step}</h3>
-    //         <button onClick={previousStep} className="navigate previous">Previous Step</button>
-    //         <button onClick={nextStep} className="navigate next">Next Step</button>
+    //         <Button onClick={previousStep} className="navigate previous">Previous Step</Button>
+    //         <Button onClick={nextStep} className="navigate next">Next Step</Button>
     //     </div>
     // )
 }
