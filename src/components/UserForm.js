@@ -1,21 +1,23 @@
 import React, { useState } from 'react'
 import Button from 'react-bootstrap/Button'
 
+//import FormContextProvider from './FormContext'
 import FormUserDetails from './FormUserDetails'
 import FormPersonalDetails from './FormPersonalDetails'
 import Confirm from './Confirm'
 
 
 export default function UserForm() {
+    //const {initialState} = useContext(FormContextProvider)
     const initialState = {
-        step: 1,
-        firstName: '',
-        lastName: '',
-        email: '',
-        occupation: '',
-        city: '',
-        bio: '',
-    }
+      step: 1,
+      firstName: '',
+      lastName: '',
+      email: '',
+      occupation: '',
+      city: '',
+      bio: '',
+  }
 
     const[state, setState] = useState(initialState)
     
